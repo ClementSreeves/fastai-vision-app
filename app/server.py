@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1wM1cjjW-6loA-3WlOFf-zIosvUlekT-b'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1qZoqWrX-SA5aiyzuOZWKpVtu46VulcJY'
 model_file_name = 'model'
 classes = ['mountain', 'road']
 path = Path(__file__).parent
