@@ -5,10 +5,16 @@ from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
 
+from functools import partial
+import pickle
+pickle.load = partial(pickle.load, encoding="latin1")
+pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
+model = torch.load(model_file, map_location=lambda storage, loc: storage, pickle_module=pickle)
+
 from fastai import *
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1wM1cjjW-6loA-3WlOFf-zIosvUlekT-b'
+model_file_url = 'https://storage.cloud.google.com/clement-sreeves-sandbox.appspot.com/stage-2.pth?organizationId=1056188278627'
 model_file_name = 'stage-2.pth'
 classes = ['mountain', 'road']
 path = Path(__file__).parent
