@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-model_file_url = 'https://storage.cloud.google.com/clement-sreeves-sandbox.appspot.com/stage-2.pth?organizationId=1056188278627'
+model_file_url = 'https://www.dropbox.com/s/mj5mof01y07nugz/stage-2.pth?raw=1'
 model_file_name = 'stage-2.pth'
 classes = ['mountain', 'road']
 path = Path(__file__).parent
